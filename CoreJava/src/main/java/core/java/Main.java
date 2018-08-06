@@ -6,7 +6,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		ListToMap listToMap = new ListToMap();
-		listToMap.convertListToMap();
+		listToMap.convertListToMapSort();
 	
 	}
 }
