@@ -6,8 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import core.java.pojo.Student;
-
 public class MapToList {
 	
 	
@@ -38,8 +36,8 @@ public class MapToList {
 		
 		// Java 8, filter
 		List<String> listNameFilter8 = map.values().stream()
-																		.filter(x -> !"Storm".equalsIgnoreCase(x))
-																		.collect(Collectors.toList());
+				.filter(x -> !"Storm".equalsIgnoreCase(x))
+				.collect(Collectors.toList());
 		
 		System.out.println("\nList Name Fildered forEach()");
 		listNameFilter8.forEach(System.out::println);
