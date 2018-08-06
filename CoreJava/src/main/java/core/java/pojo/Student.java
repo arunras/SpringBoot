@@ -1,4 +1,4 @@
-package core.java.collections;
+package core.java.pojo;
 
 public class Student {
 	private int id;
