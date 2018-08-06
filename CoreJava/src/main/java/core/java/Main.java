@@ -1,12 +1,13 @@
 package core.java;
 
-import core.java.collections.ListToMap;
+import core.java.collections.MapToList;
 
 public class Main {
 	
 	public static void main(String[] args) {
-		ListToMap listToMap = new ListToMap();
-		listToMap.convertListToMapSort();
+		
+		MapToList mapToList = new MapToList();
+		mapToList.convertMapToList();
 	
 	}
 }
