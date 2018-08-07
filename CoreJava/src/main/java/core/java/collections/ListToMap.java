@@ -21,14 +21,14 @@ public class ListToMap {
 		
 		// key = id, value = name
 		Map<Integer, String> map1 = list.stream().collect(
-															Collectors.toMap(Student::getId, Student::getName)
-															);
+        Collectors.toMap(Student::getId, Student::getName)
+        );
 		System.out.println("Result 1: " + map1);
 		
 		// key = name, value = gpa
 		Map<String, Double> map2 = list.stream().collect(
-															Collectors.toMap(x -> x.getName(), x -> x.getGpa())
-															);
+        Collectors.toMap(x -> x.getName(), x -> x.getGpa())
+        );
 		System.out.println("Result 2: " + map2);
 	}
 	
@@ -44,8 +44,8 @@ public class ListToMap {
 		
 		// key = name, value = id
 		Map<String, Integer> map1 = list.stream().collect(
-															Collectors.toMap(Student::getName, Student::getId, (oldKey, newKey) -> newKey)
-															);
+        Collectors.toMap(Student::getName, Student::getId, (oldKey, newKey) -> newKey)
+        );
 		System.out.println("Result 1: " + map1);
 	}
 	
@@ -60,10 +60,8 @@ public class ListToMap {
 		
 		// key = name, value = id
 		Map<Integer, String> map1 = list.stream()
-																	.sorted(Comparator.comparingInt(Student::getId).reversed())
-																	.collect(
-																			Collectors.toMap(x -> x.getId(), x -> x.getName())
-																			);
+      .sorted(Comparator.comparingInt(Student::getId).reversed())
+      .collect(Collectors.toMap(x -> x.getId(), x -> x.getName()));
 		System.out.println("Sorted: " + map1);
 	}
 }
